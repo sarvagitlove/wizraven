@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Grid, GridItem, Text, VStack, HStack, Icon, Badge } from '@chakra-ui/react';
-import { MdMemory, MdFlash, MdSecurity } from 'react-icons/md';
+import { MdMemory, MdFlashOn, MdSecurity } from 'react-icons/md';
 import LogInput from '../components/LogInput';
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
           <HStack spacing={4}>
             <Badge colorScheme="green" px={3} py={1} borderRadius="full" fontSize="sm">
               <HStack spacing={1}>
-                <Icon as={MdFlash} boxSize={3} />
+                <Icon as={MdFlashOn} boxSize={3} />
                 <Text>Fast Analysis</Text>
               </HStack>
             </Badge>
