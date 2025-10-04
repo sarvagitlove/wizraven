@@ -61,7 +61,7 @@ Wizraven is designed as a modern, scalable application with a clear separation o
 - Supports both CPU and GPU acceleration
 - Scales well with large document collections
 
-#### LLM Integration (Gemini API)
+#### LLM Integration (Cerebras AI)
 - Provides strong performance for technical text
 - Cost-effective with free tier
 - Easy fallback to open-source alternatives

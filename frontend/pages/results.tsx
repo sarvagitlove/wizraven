@@ -21,9 +21,36 @@ export default function Results() {
     // This is a placeholder for demonstration
     const fetchResults = async () => {
       try {
-        // const response = await fetch('/api/analysis/${router.query.id}');
-        // const data = await response.json();
-        // setResult(data);
+        // For demo purposes, generate results from the stored log content
+        const logContent = sessionStorage.getItem('demoLogContent') || '';
+        
+        // Generate a simple demo analysis
+        const demoResult: AnalysisResult = {
+          summary: `Analyzed log content (${logContent.length} characters)`,
+          recommendations: [
+            'Review system performance metrics',
+            'Check for error patterns',
+            'Monitor resource usage'
+          ],
+          details: [
+            {
+              category: 'Performance',
+              findings: [
+                'System response time: Normal',
+                'Resource utilization: Within limits'
+              ]
+            },
+            {
+              category: 'Errors',
+              findings: [
+                'No critical errors detected',
+                'Standard log patterns observed'
+              ]
+            }
+          ]
+        };
+        
+        setResult(demoResult);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching results:', error);
@@ -48,6 +75,30 @@ export default function Results() {
   return (
     <Container maxW="container.xl" py={8}>
       <Heading as="h1" mb={6}>Analysis Results</Heading>
+      {result && (
+        <Box>
+          <Box mb={8}>
+            <Heading as="h2" size="lg" mb={4}>Summary</Heading>
+            <Text>{result.summary}</Text>
+          </Box>
+
+          <Box mb={8}>
+            <Heading as="h2" size="lg" mb={4}>Recommendations</Heading>
+            {result.recommendations.map((rec, index) => (
+              <Text key={index} mb={2}>• {rec}</Text>
+            ))}
+          </Box>
+
+          {result.details.map((section, index) => (
+            <Box key={index} mb={8}>
+              <Heading as="h2" size="lg" mb={4}>{section.category}</Heading>
+              {section.findings.map((finding, fidx) => (
+                <Text key={fidx} mb={2}>• {finding}</Text>
+              ))}
+            </Box>
+          ))}
+        </Box>
+      )}
       {result && (
         <Box>
           <Box mb={6}>

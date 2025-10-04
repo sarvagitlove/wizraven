@@ -22,7 +22,7 @@ Wizraven is an AI-powered log analyzer designed specifically for network enginee
 - FastAPI (hosted on Render)
 - AG2 Agents for modular analysis
 - FAISS for vector search
-- Gemini API for LLM capabilities
+- Cerebras AI for LLM capabilities
 - Python 3.9+
 
 ## 🏗 Architecture
@@ -60,12 +60,12 @@ uvicorn app.main:app --reload
 ### Environment Variables
 Copy `.env.example` to `.env` and fill in your API keys:
 ```
-GEMINI_API_KEY=your_key_here
+CEREBRAS_API_KEY=your_key_here
 ```
 
 ## 📝 Roadmap
 
-- [x] MVP with Gemini API integration
+- [x] MVP with Cerebras AI integration
 - [ ] Support for multiple log formats
 - [ ] Custom LLM integration options
 - [ ] Enhanced visualization features
@@ -82,7 +82,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Google Gemini API team
+- Cerebras AI team
 - FastAPI community
 - Next.js team
 - All our contributors

@@ -12,7 +12,7 @@
 ### Phase 2: Core Features
 - [ ] Enhanced log format detection
 - [ ] Improved analysis algorithms
-- [ ] Integration with Gemini API
+- [ ] Integration with Cerebras AI
 - [ ] Basic visualization features
 
 ### Phase 3: Knowledge Integration

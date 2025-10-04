@@ -25,7 +25,7 @@ services:
       - ./backend:/app
       - ./backend/knowledge/faiss_index:/app/knowledge/faiss_index
     environment:
-      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY}
       - ENVIRONMENT=development
       - LOG_LEVEL=INFO
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

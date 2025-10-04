@@ -1,5 +1,5 @@
 from typing import Dict, List
-from ag2.agent import Agent
+from .base_agent import Agent
 
 class CrawlerAgent(Agent):
     def __init__(self):

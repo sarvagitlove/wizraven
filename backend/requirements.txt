@@ -1,22 +1,22 @@
 # Core dependencies
-fastapi==0.104.0
-uvicorn==0.24.0
-pydantic==2.4.2
-python-dotenv==1.0.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.6.1
+python-dotenv>=1.0.0
 
 # LLM and Vector Store
-google-generativeai==0.2.0
-faiss-cpu==1.7.4
-sentence-transformers==2.2.2
+cerebras-cloud-sdk>=1.0.0
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
 
-# AG2 framework
-antelope-agent-framework==0.2.0  # AG2 framework
+# Agent framework (replaced ag2)
+langchain>=0.0.300
 
 # Utilities
-python-multipart==0.0.6
-httpx==0.25.0
-numpy==1.26.0
-pandas==2.1.1
+python-multipart>=0.0.6
+httpx>=0.28.1
+numpy>=1.26.0
+pandas>=2.1.1
 
 # Development
 pytest==7.4.2
